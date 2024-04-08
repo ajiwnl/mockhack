@@ -1,3 +1,8 @@
-﻿@{
+﻿﻿@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
     Layout = "_Layout";
+    ViewBag.Username = Context.Session.GetString("Username");
+    ViewBag.Usertype = Context.Session.GetString("Usertype");
 }

@@ -12,6 +12,9 @@ namespace TestCRUD.Models
 		public string? Username { get; set; }
 
 		[Required]
+		public string? Usertype { get; set; }
+
+		[Required]
 		[StringLength(20)]
 		public string? Password { get; set; }
 	}

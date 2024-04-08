@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using TestCRUD;
 using TestCRUD.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var startup = new Startup(builder.Configuration);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -10,8 +12,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 
 	options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default Connection")));
 
+startup.ConfigureServices(builder.Services);
 
 var app = builder.Build();
+
+startup.Configure(app, app.Environment);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
