@@ -33,7 +33,6 @@ namespace TestCRUD.Models
 		public DateTime ENDTIME { get; set; }
 
 
-		//<---For Photo Verification--->
 		[StringLength(255)]
 		public string? ESTABIMAGEPATH { get; set; }
 
