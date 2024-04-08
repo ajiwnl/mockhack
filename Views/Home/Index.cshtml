@@ -2,7 +2,59 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@* Font Imports *@
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+
+@*Swal Import and JQuery*@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<div id="layoutbody">
+    <div class="text-center pt-5">
+        <p class="maintxt">
+            EXPLORE<br />
+            AND ENJOY NATURE<br />
+            WITH US
+        </p>
+        <p id="secondtxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+    <div class="d-flex justify-content-center pt-2">
+        <a type="button" id="Bookbtn" class="mx-auto border-0 text-center pt-2"
+           asp-area="" asp-controller="Listing" asp-action="Index" style="text-decoration: none">
+            BOOK NOW
+        </a>
+    </div>
 </div>
+
+
+<style>
+    .maintxt {
+        font-family: 'Merriweather', serif;
+        font-size: 40px;
+        text-indent: 30px;
+        color: azure;
+        position: relative;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    #secondtxt {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+        color: azure;
+        position: relative;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    #Bookbtn {
+        background-color: #3ECCB5;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: initial;
+        color: azure;
+        border-radius: 10px;
+        width: 200px;
+        height: 40px;
+        justify-content: center;
+    }
+</style>
